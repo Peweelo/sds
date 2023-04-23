@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet" />
+
+		<link rel="stylesheet" href="./css/style.min.css" />
+	</head>
+	<body>
+		<nav class="nav wrapper">
+			<div class="nav-items">
+				<button class="nav-items-btn"><a href="#main">Powrot</a></button>
+				<p class="nav-items-item"><a href="#ex1">Zad. 1</a></p>
+				<p class="nav-items-item"><a href="#ex2">Zad. 2</a></p>
+				<p class="nav-items-item"><a href="#ex3">Zad. 3</a></p>
+			</div>
+		</nav>
+		<!--u gory ma byc nav
+         stron glowna
+            h1 
+            jakis opis 
+            dosyc prosta i ladna w obsludze
+        5 zadan -->
+		<main id="main" class="main wrapper">
+			<!--strona glowna-->
+			<div class="main-container">
+				<div class="main-container-right">
+					<div class="main-container-right-texts">
+						<h1 class="main-container-right-texts-title">Witam!</h1>
+						<p class="main-container-right-texts-paragraph">
+							U gory pokazane sa wszystkie zadan w ktore mozna klikac ewentualnie moze Pan zjezdzac powoli w dol i
+							wszystkie zadania sie pojawia! Zycze milej zabawy
+						</p>
+					</div>
+				</div>
+				<div class="main-container-left"></div>
+			</div>
+		</main>
+
+		<section class="ex1 ex wrapper" id="ex1">
+			<h2 class="ex-title">Zad1</h2>
+			<p class="ex-desc">
+				Napisz program, który sprawdzi, czy podana liczba całkowita dodatnia jest liczbą palindromiczną
+			</p>
+
+			<div class="ex1-container">
+				<div class="ex1-container-right">
+					<h2 class="ex1-container-right-title">Wytlumaczenie:</h2>
+					<p class="ex1-container-right-desc">
+						Funkcja isPalindrome sprawdza, czy liczba jest palindromem, konwertując ją na łańcuch znaków za pomocą
+						metody toString(), a następnie odwracając kolejność znaków za pomocą metod split(), reverse() i join().
+						<br /><br />
+						Jeśli łańcuch oryginalny i odwrócony są takie same, to funkcja zwróci wartość true, co oznacza, że liczba
+						jest palindromem.
+                        <br><br>
+                        W innym wypadku funkcja zwroci false, co oznacza ,że liczba nie jest palindromem
+                        <br /><br />
+                        <p><a href="https://imgur.com/a/eSK61Eh">Link Do Programu</a></p>
+					</p>
+				</div>
+				<div class="ex1-container-left">
+					<div action="" class="ex1-container-left-form">
+						<label for="ex1input" class="ex1-container-left-form-label ex1label"> Wynik pojawi sie tutaj: </label>
+						<input
+							id="ex1input"
+							type="number"
+							placeholder="Prosze podac liczbe..."
+							class="ex1-container-left-form-input ex1input" /><button class="ex1-container-left-form-btn btn ex1btn">
+							Sprawdz Wynik
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="ex1 ex wrapper" id="ex2">
+			<h2 class="ex-title">Zad2</h2>
+			<p class="ex-desc">
+				Napisz program, który wczyta słowo i sprawdzi, czy dwie takie same litery występują w nim obok siebie.
+			</p>
+
+			<div class="ex1-container reverse">
+				<div class="ex1-container-right">
+					<h2 class="ex1-container-right-title">Wytlumaczenie:</h2>
+					<p class="ex1-container-right-desc">
+						program przechodzi po wszystkich parach liter w słowie (pomijając ostatnią literę, ponieważ nie ma kolejnej
+						litery do porównania) za pomocą pętli for.
+						<br /><br />
+						W każdej iteracji pętli program porównuje literę na pozycji i z literą na pozycji i + 1. Jeśli są one takie
+						same, program ustawia zmienną hasAdjacentLetters na wartość true i przerywa pętlę za pomocą instrukcji
+						break.
+						<br /><br />
+						Na koniec program sprawdza czy wartosc w hasAdjacentLetters jest prawdziwa czy falszywa i w zaleznosci od
+						tego wypisuje "TAK" lub "NIE"
+                        <br><br>
+                        <p><a href="https://imgur.com/v0iL4uf">Link Do Programu</a></p>
+					</p>
+				</div>
+				<div class="ex1-container-left">
+					<div action="" class="ex1-container-left-form">
+						<label for="ex2input" class="ex1-container-left-form-label ex2label"> Wynik pojawi sie tutaj: </label>
+						<input
+							id="ex2input"
+							type="text"
+							placeholder="Prosze wpisac slowo..."
+							class="ex1-container-left-form-input ex2input" /><button class="ex1-container-left-form-btn btn ex2btn">
+							Sprawdz Wynik
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="ex1 ex wrapper" id="ex3">
+			<h2 class="ex-title">Zad3</h2>
+			<p class="ex-desc">
+                Zapisz i omów algorytm dzielenia dwóch ułamków zwykłych. Napisz funkcję
+                wykonującą dzielenie oraz program testujący jej działanie.                
+			</p>
+
+			<div class="ex1-container">
+				<div class="ex1-container-right">
+					<h2 class="ex1-container-right-title">Wytlumaczenie:</h2>
+					<p class="ex1-container-right-desc">
+						Program używa funkcji aby obliczyc wynik z podanych liczb (liczby ktora ma zostac podzielona oraz dzielnika) oczywiscie program sprawdza czy nie probujemy dzielic przez 0!
+                        <br><br>
+                        Następnie program oblicza wynik petla for oraz oddaje nam wynik 
+                        <br><br>
+                        Program kontynuuje działanie, dopóki nie znajdzie trzech początkowych par liczb zaprzyjaźnionych.
+                        <br><br>
+                        <p><a href="https://imgur.com/a/eSK61Eh">Link Do Programu</a></p>
+					</p>
+				</div>
+				<div class="ex1-container-left">
+					<div action="" class="ex1-container-left-form">
+						<label for="ex3input" class="ex1-container-left-form-label ex3label"> Wynik pojawi sie tutaj: </label>
+						<input
+							id="ex3input"
+							type="number"
+							placeholder="Prosze podac liczbe ktora ma zostac podzielona..."
+							class="ex1-container-left-form-input ex3input" />
+						<input
+							id="ex3inputasdasd"
+							type="number"
+							placeholder="Prosze podac liczbe przez ktora system ma podzielic..."
+							class="ex1-container-left-form-input ex3devideinput" />
+                            <button class="ex1-container-left-form-btn btn ex3btn">
+							Sprawdz Wynik
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+		<footer>
+			<h6>Prace Wykonal Paweł Pastuła z klasy 2 liceum</h6>
+			<p>Mam nadzieje ze sie podobala!</p>
+		</footer>
+
+		<script src="./js/main.js"></script>
+	</body>
+</html>
