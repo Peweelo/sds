@@ -10,12 +10,11 @@ const PreventHandler = () => {
 				const ex2label = document.querySelector('.ex2label')
 				AdjacentLetters(ex2input, ex2label)
 			} else if (btn.classList.contains('ex3btn')) {
-        const ex3input = document.querySelector('.ex3input').value
-        const devideinput = document.querySelector('.ex3devideinput').value
-        const ex3label = document.querySelector('.ex3label')
-        let [r, remainder] = divideByDigit(ex3input,devideinput,ex3label);
-
-      }
+				const ex3input = document.querySelector('.ex3input').value
+				const devideinput = document.querySelector('.ex3devideinput').value
+				const ex3label = document.querySelector('.ex3label')
+				divideByDigit(ex3input, devideinput, ex3label)
+			}
 		})
 	)
 }
@@ -39,12 +38,12 @@ function isPalindrome(number, label) {
 	}
 }
 
-const AdjacentLetters = (word, label) => {
-  console.log(word);
-  if (word === '') {
-    label.textContent = 'Prosze Wpisac Slowo!'
-    return false
-  }
+const AdjacentLetters = (word1, label) => {
+	const word = word1.trim()
+	if (word === '') {
+		label.textContent = 'Prosze Wpisac Slowo!'
+		return false
+	}
 	for (let i = 0; i < word.length - 1; i++) {
 		if (word[i] === word[i + 1]) {
 			hasAdjacentLetters = true
@@ -54,37 +53,37 @@ const AdjacentLetters = (word, label) => {
 
 	if (hasAdjacentLetters) {
 		label.textContent = '2 litery sa takie same!'
-    hasAdjacentLetters = false
+		hasAdjacentLetters = false
 	} else {
 		label.textContent = 'Nie ma dwoch takich samych liter :('
-    hasAdjacentLetters = false
+		hasAdjacentLetters = false
 	}
 }
 
 PreventHandler()
 
-function divideByDigit(numStr, divisorStr,label) {
-  const num = parseInt(numStr);
-  const divisor = parseInt(divisorStr);
+function divideByDigit(numStr, divisor, label) {
+	let quotient = ''
+	let remainder = 0
+	if (divisor == 0) {
+		label.textContent = 'Nie można dzielić przez 0!'
+		return false
+	}
 
-  let quotient = "";
-  let remainder = 0
+	for (let i = 0; i < numStr.length; i++) {
+		const currentDigit = parseInt(numStr[i])
 
-  for (let i = 0; i < numStr.length; i++) {
-    const currentDigit = parseInt(numStr[i]);
+		const partialDividend = remainder * 10 + currentDigit
+		const partialQuotient = Math.floor(partialDividend / divisor)
+		remainder = partialDividend % divisor
 
-    const partialDividend = remainder * 10 + currentDigit;
-    const partialQuotient = Math.floor(partialDividend / divisor);
-    remainder = partialDividend % divisor;
+		quotient += partialQuotient.toString()
+	}
 
-    quotient += partialQuotient.toString();
-  }
+	if (quotient.startsWith('0')) {
+		quotient = quotient.slice(1)
+	}
 
-  if (quotient.startsWith("0")) {
-    quotient = quotient.slice(1);
-  }
-
-  label.textContent = `Wynik pojawi sie tutaj: ${quotient}`
-  return [quotient];
+	label.textContent = `Wynik pojawi sie tutaj: ${quotient}`
+	return [quotient]
 }
-

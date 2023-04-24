@@ -100,6 +100,7 @@ html {
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
   font-size: 62.5%;
+  background-image: linear-gradient(109.6deg, rgba(156, 252, 248, 0.5) 11.2%, rgba(110, 123, 251, 0.5) 91.1%);
 }
 
 .nav {
@@ -219,7 +220,6 @@ html {
   width: 50%;
   border-radius: 15px;
   padding: 1em;
-  background-color: rgba(0, 255, 255, 0.582);
 }
 .ex1-container-right-title {
   font-size: 2.3rem;
@@ -228,6 +228,10 @@ html {
 .ex1-container-right-desc {
   font-size: 1.7rem;
   line-height: 35px;
+}
+.ex1-container-right a {
+  color: rgb(86, 0, 156);
+  font-size: 1.6rem;
 }
 .ex1-container-left {
   height: 100%;
@@ -253,6 +257,7 @@ html {
   padding: 0.3em;
   font-size: 1.7rem;
   border-bottom: 2px solid grey;
+  background-color: transparent;
   margin: 1em 0;
 }
 .ex1-container-left-form-input:focus {

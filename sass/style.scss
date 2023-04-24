@@ -6,6 +6,8 @@ html {
 	font-family: 'Poppins', sans-serif;
 	scroll-behavior: smooth;
 	font-size: 62.5%;
+	// background-image: linear-gradient(to right, rgba(242, 112, 155, .3), rgba(255, 148, 114, 0.3));
+	background-image: linear-gradient( 109.6deg, rgba(156,252,248,.5) 11.2%, rgba(110,123,251,.5) 91.1% );
 }
 
 .nav {
@@ -48,7 +50,7 @@ html {
 				text-decoration: none;
 				color: black;
 				border-bottom: 1px solid transparent;
-				transition: color 0.3s, border-color .3s;
+				transition: color 0.3s, border-color 0.3s;
 				line-height: 10vh;
 				&:hover {
 					border-color: grey;
@@ -75,7 +77,7 @@ html {
 				&-title {
 					font-size: 4rem;
 					font-weight: bold;
-					transition: rotate .3s;
+					transition: rotate 0.3s;
 					animation: move 2s forwards;
 				}
 
@@ -129,7 +131,6 @@ html {
 		align-items: center;
 		justify-content: center;
 		flex-direction: row-reverse;
-		
 
 		&.reverse {
 			flex-direction: row;
@@ -138,15 +139,19 @@ html {
 			width: 50%;
 			border-radius: 15px;
 			padding: 1em;
-			background-color: rgba(0, 255, 255, 0.582);
-			&-title {
-				font-size: 2.3rem;	
-				margin-bottom: 1em;
 
+			&-title {
+				font-size: 2.3rem;
+				margin-bottom: 1em;
 			}
 			&-desc {
 				font-size: 1.7rem;
 				line-height: 35px;
+			}
+
+			a {
+				color: rgb(86, 0, 156);
+				font-size: 1.6rem;
 			}
 		}
 		&-left {
@@ -173,6 +178,7 @@ html {
 					padding: 0.3em;
 					font-size: 1.7rem;
 					border-bottom: 2px solid grey;
+					background-color: transparent;
 					margin: 1em 0;
 					&:focus {
 						outline: none;
@@ -187,7 +193,7 @@ html {
 					background-color: cyan;
 					font-size: 1.8rem;
 					padding: 0.5em 1em;
-					transition: background-color .4s;
+					transition: background-color 0.4s;
 
 					&:hover {
 						background-color: rgb(86, 0, 156);
